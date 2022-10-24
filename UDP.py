@@ -11,6 +11,7 @@ class UdpClient:
         remote = str(input('请输入UDP接收地址: ')).split(':')
         self.remote = (str(remote[0]), int(remote[1]))  # remote接收消息的ip地址与port
         # 发送消息
+        print('<<<<<开始发送消息>>>>>')
         while True:
             message = str(input('localhost: '))
             self.udp.sendto(message.encode('utf-8'), self.remote)
@@ -22,6 +23,7 @@ class UdpClient:
         self.local = (self.get_host_ip(), udp_port)  # local接收消息的ip地址与port
         self.udp.bind(self.local)  # 将在指定IP地址的指定端口接受消息
         # 接收消息
+        print('<<<<<开始接收消息>>>>>')
         while True:
             data, addr = self.udp.recvfrom(1024)
             print('%s: %s' % (addr[0], data.decode('utf-8')))
