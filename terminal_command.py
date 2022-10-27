@@ -12,7 +12,7 @@ def run_command(command):
 
 if __name__ == '__main__':
     while True:
-        command = input('<GL:#> ')
+        command = input('GL ~$ ')
         response = run_command(command=command)
 
         print(response.decode('utf-8'))

@@ -23,4 +23,4 @@ if __name__ == '__main__':
     host, port = '127.0.0.1', 8080
     user, password = 'admin', '123456'
     ftp_client = FTPClient(host, port, user, password)
-    ftp_client.download('test.jpg', r'C:\Users\GL\Desktop\test.jpg')
+    ftp_client.download('test.jpg', r'/Users/GongLi/Desktop/test.jpg')

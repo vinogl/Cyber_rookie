@@ -2,6 +2,10 @@ from OpenSSL.crypto import PKey, TYPE_RSA, sign
 from OpenSSL.crypto import verify, X509
 
 
+"""
+实现数字签名，并验证
+"""
+
 # 生成密钥对
 pk = PKey()
 pk.generate_key(type=TYPE_RSA, bits=1024)
